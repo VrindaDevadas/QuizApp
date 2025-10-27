@@ -1,0 +1,53 @@
+/* Basic styling */
+body {
+    font-family: sans-serif;
+}
+
+.quiz-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 150px auto;
+    text-align: center;
+    background-color: rgb(230, 203, 203);
+    padding: 120px;
+    border-radius: 15px;
+    color: rgb(182, 81, 123);
+
+    h4 {
+        color: rgb(5, 5, 5);
+        margin-top: -6px;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.hide {
+    display: none;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(66, 185, 66);
+    color: aliceblue;
+    font-size: 1.3rem;
+    margin-top: 5px;
+}
