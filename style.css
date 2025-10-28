@@ -121,6 +121,7 @@ button:hover {
         text-align: center;
         font-size: 1.2rem;
         margin-bottom: 25px;
+        font-weight: 500;
     }
 
     #question {
