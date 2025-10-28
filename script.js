@@ -16,7 +16,34 @@ const quizData = [
             { "text": "Jupiter", "correct": false },
             { "text": "Venus", "correct": false }
         ]
-    }
+    },
+    {
+        "question": "Which is the largest ocean in the world?",
+        "answers": [
+            { "text": "Atlantic Ocean", "correct": false },
+            { "text": "Indian Ocean", "correct": false },
+            { "text": "Pacific Ocean", "correct": true },
+            { "text": "Arctic Ocean", "correct": false }
+        ]
+    },
+    {
+        "question": "What is the smallest bone in the human body? ",
+        "answers": [
+            { "text": "Femur", "correct": false },
+            { "text": "Humerus", "correct": false },
+            { "text": "Skull", "correct": false },
+            { "text": "Stapes", "correct": true }
+        ]
+    },
+    {
+        "question": "Which planet is known as the Blue Planet? ",
+        "answers": [
+            { "text": "Earth", "correct": true },
+            { "text": "Neptune", "correct": false },
+            { "text": "Uranus", "correct": false },
+            { "text": "Saturn", "correct": false }
+        ]
+    },
 ]
 
 
@@ -88,4 +115,45 @@ function selectAnswer(e) {
     }, 1000);
 }
 
+
+function setStatusClass(element, correct) {
+    clearStatusClass(element);
+    if (correct) {
+        element.classList.add('correct');
+    } else {
+        element.classList.add('incorrect');
+    }
+}
+
+function clearStatusClass(element) {
+    element.classList.remove('correct');
+    element.classList.remove('incorrect');
+}
+
+function startTimer() {
+    timeLeft = 60;
+    timerEl.innerText = `Time left: ${timeLeft}`;
+    timer = setInterval(() => {
+        timeLeft--;
+        timerEl.innerText = `Time left: ${timeLeft}`;
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            score--;
+            currentQuestionIndex++;
+            showNextQuestion();
+        }
+    }, 1000);
+}
+
+function endQuiz() {
+    quizContainer.classList.add('hide');
+    resultsContainer.classList.remove('hide');
+
+    const totalQuestions = quizData.length;
+
+    scoreEl.innerText = `${score} / ${totalQuestions}`;
+
+    // clear the resultsEl before showing new results
+    resultsEl.innerHTML = "";
+}
 
