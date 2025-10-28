@@ -1,6 +1,6 @@
 const quizData = [
     {
-        "question": "What is the capital of France?",
+        "question": "1. What is the capital of France?",
         "answers": [
             { "text": "Berlin", "correct": false },
             { "text": "Madrid", "correct": false },
@@ -9,7 +9,7 @@ const quizData = [
         ]
     },
     {
-        "question": "Which planet is known as the Red Planet?",
+        "question": "2. Which planet is known as the Red Planet?",
         "answers": [
             { "text": "Earth", "correct": false },
             { "text": "Mars", "correct": true },
@@ -18,7 +18,7 @@ const quizData = [
         ]
     },
     {
-        "question": "Which is the largest ocean in the world?",
+        "question": "3. Which is the largest ocean in the world?",
         "answers": [
             { "text": "Atlantic Ocean", "correct": false },
             { "text": "Indian Ocean", "correct": false },
@@ -27,7 +27,7 @@ const quizData = [
         ]
     },
     {
-        "question": "What is the smallest bone in the human body? ",
+        "question": "4. What is the smallest bone in the human body? ",
         "answers": [
             { "text": "Femur", "correct": false },
             { "text": "Humerus", "correct": false },
@@ -36,7 +36,7 @@ const quizData = [
         ]
     },
     {
-        "question": "Which planet is known as the Blue Planet? ",
+        "question": "5. Which planet is known as the Blue Planet? ",
         "answers": [
             { "text": "Earth", "correct": true },
             { "text": "Neptune", "correct": false },
