@@ -20,6 +20,17 @@ body {
     max-width: 800px;
 }
 
+h1,
+p {
+
+    position: relative;
+    margin: 8px;
+}
+
+#category-container {
+    text-align: center;
+}
+
 
 
 .hide {
