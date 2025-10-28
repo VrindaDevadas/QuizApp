@@ -117,6 +117,11 @@ button:hover {
         font-size: 1rem;
     }
 
+    .btn-grid button {
+        width: 85%;
+        max-width: 400px;
+    }
+
     .card-header {
         grid-template-columns: 1fr;
         gap: 15px;
