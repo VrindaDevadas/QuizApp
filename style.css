@@ -68,7 +68,7 @@ body {
 }
 
 button {
-    background-color: #2ac462;
+    background-color: #414141;
     border: none;
     border-radius: 8px;
     padding: 15px;
@@ -84,7 +84,7 @@ button:hover {
 }
 
 .correct {
-    background-color: #27ae60;
+    background-color: #27ae30;
 }
 
 .incorrect {

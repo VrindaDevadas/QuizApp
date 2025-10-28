@@ -1,3 +1,5 @@
+
+
 const quizData = [
     {
         "question": "1. What is the capital of France?",
@@ -99,20 +101,36 @@ function resetState() {
 }
 
 function selectAnswer(e) {
-    const selectedBtn = e.target;
-    const correct = selectedBtn.dataset.correct;
-    setStatusClass(document.body, correct);
-    Array.from(answerButtonsEl.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct);
-    });
-    if (correct) {
-        score++;
-    }
+
     clearInterval(timer);
+
+    const selectedBtn = e.target;
+    const isCorrect = selectedBtn.dataset.correct === "true";
+
+
+    Array.from(answerButtonsEl.children).forEach(button => {
+        button.disabled = true;
+    });
+
+
+    if (isCorrect) {
+        selectedBtn.classList.add('correct');
+        score++;
+    } else {
+
+        selectedBtn.classList.add('incorrect');
+
+        Array.from(answerButtonsEl.children).forEach(button => {
+            if (button.dataset.correct === "true") {
+                button.classList.add('correct');
+            }
+        });
+    }
+
     setTimeout(() => {
         currentQuestionIndex++;
         showNextQuestion();
-    }, 1000);
+    }, 2000); // Increased delay to 2s for better feedback visibility
 }
 
 
