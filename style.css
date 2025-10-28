@@ -47,6 +47,11 @@ body {
 
 }
 
+#timer i {
+    margin-right: 8px;
+    font-size: 1.4rem;
+}
+
 #question {
     text-align: left;
 }
@@ -111,38 +116,53 @@ button:hover {
 
 @media (max-width: 480px) {
 
+    .card-header {
+        display: block;
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+    }
 
-    button {
-        padding: 10px;
-        font-size: 1rem;
+    #question {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    #timer {
+        justify-content: center;
+
+        display: flex;
+    }
+
+
+    .btn-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        justify-items: center;
     }
 
     .btn-grid button {
         width: 85%;
-        max-width: 400px;
+        margin: 0;
     }
 
-    .card-header {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        margin-bottom: 30px;
+    button {
+        padding: 12px;
         font-size: 1.1rem;
-        font-weight: 600;
     }
 
     #start-container,
     #results-container {
-        padding: 25px;
+        padding: 20px;
     }
 
     #start-container h1,
     #results-container h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     #start-container p,
     #results-container p {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
-
 }

@@ -51,11 +51,11 @@ const startContainer = document.getElementById('start-container');
 const quizContainer = document.getElementById('quiz-container');
 const resultsContainer = document.getElementById('results-container');
 const startBtn = document.getElementById('start-btn');
-const timerEl = document.getElementById('timer');
 const questionEl = document.getElementById('question');
 const answerButtonsEl = document.getElementById('answer-buttons');
 const scoreEl = document.getElementById('score');
 const resultsEl = document.getElementById('results');
+const timeTextEl = document.getElementById('time-text');
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -132,10 +132,10 @@ function clearStatusClass(element) {
 
 function startTimer() {
     timeLeft = 60;
-    timerEl.innerText = `Time left: ${timeLeft}`;
+    timeTextEl.innerText = timeLeft;
     timer = setInterval(() => {
         timeLeft--;
-        timerEl.innerText = `Time left: ${timeLeft}`;
+        timeTextEl.innerText = timeLeft;
         if (timeLeft <= 0) {
             clearInterval(timer);
             score--;
